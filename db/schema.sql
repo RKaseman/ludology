@@ -1,14 +1,12 @@
 
-DROP DATABASE IF EXISTS vgresources_db;
-CREATE DATABASE vgresources_db;
+DROP DATABASE IF EXISTS game_db;
+CREATE DATABASE game_db;
 
+USE game_db;
 
-
--- USE vgresources_db;
-
--- CREATE TABLE games (
---     id INTEGER NOT NULL AUTO_INCREMENT,
---     name VARCHAR(255) NOT NULL,
---     PRIMARY KEY (id)
--- );
+CREATE TABLE games (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
 
