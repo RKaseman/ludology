@@ -8,7 +8,7 @@ var PORT = process.env.PORT || 8080;
 var app = express();
 
 
-// get public folder's files (css, javascript)
+// access public folder
 app.use(express.static("public"));
 
 
@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 
 // import routes
-// var routes = require("./controllers/burgers_controller.js");
+require("./apiRoutes.js")(app);
 // app.use(routes);
 
 
