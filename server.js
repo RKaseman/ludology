@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 
 // import routes
-require("./routes/apiRoutes.js")(app);
+require("./routes/api-routes.js")(app);
 
 
 // sync sequelize & start server
