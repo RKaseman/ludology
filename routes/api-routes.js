@@ -4,7 +4,8 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.get("/api/games", function (req, res) {
-        db.Game.findAll({}).then(function (dbGame) {
+        db.Game.findAll({
+        }).then(function (dbGame) {
             res.json(dbGame);
         });
     });
@@ -27,7 +28,6 @@ module.exports = function (app) {
         }).then(function (dbGame) {
             res.json(dbGame);
         });
-
     });
 
     app.put("/api/games", function (req, res) {
@@ -43,3 +43,4 @@ module.exports = function (app) {
             });
     });
 };
+

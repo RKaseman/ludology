@@ -4,5 +4,8 @@ USE game_db;
 INSERT INTO games
     (name)
 VALUES
-    ("testname1");
+    ("name"),
+    ("col1"),
+    ("col2");
+    ("col3");
 
