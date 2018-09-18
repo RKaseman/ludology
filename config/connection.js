@@ -3,12 +3,15 @@
 var Sequelize = require("sequelize");
 
 
-var connection = mysql.createConnection({
+var sequelize = new Sequelize("vgresources_db", "root", "root", {
     host: "localhost",
     port: 3306,
-    user: "root",
-    password: "root",
-    database: "vgresources_db"
+    dialect: "mysql",
+    pool: {
+        max: 5,
+        min: 0,
+        idle: 10000
+    }
 });
 
 
