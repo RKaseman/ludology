@@ -15,15 +15,5 @@ var sequelize = new Sequelize("vgresources_db", "root", "root", {
 });
 
 
-connection.connect(function (error) {
-    if (error) {
-        console.log("Connection error" + error.stack);
-        return;
-    }
-    console.log("Connection id " + connection.threadId);
-});
-
-
-// to orm.js
-module.exports = connection;
+module.exports = sequelize;
 
