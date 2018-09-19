@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style rel="stylesheet">
+        body {
+          background-color: black;
+          color: rgb(30,144,255);
+          font-size: 48px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="string1">
+
+    </div>
+    <div id="string2">
+
+    </div>
+    <div id="string3">
+
+    </div>
+
+  </body>
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <script type="text/javascript">
+      var string1 = ["W", "a", "k", "e", " ","u", "p", " ", "G", "a", "m", "e", "r", ".", " ", ".", " ", "."];
+      var string2 = ["L", "u", "d", "o", "l", "o", "g", "y", " ", "h", "a", "s", " ", "y", "o", "u", "."];
+      var string3 = ["F", "o", "l", "l", "o", "w", " ", "t", "h", "e", " ", "g", "a", "m", "e", " ", "g", "u", "i", "d", "e", "s", "."];
+      var string4 = ["K", "n", "o", "c", "k", " ", "k", "n", "o", "c", "k", ","," ", "G", "a", "m", "e", "r", "!" ];
+      var count1 = 0;
+
+      console.log(string1);
+      console.log(string2);
+      console.log(string3);
+      console.log(string4);
+
+      // var interval2;
+      // var interval3;
+      // var interval4;
+      var interval;
+
+
+      setTimeout(function() {
+        interval = setInterval(function(){
+          displayString1(string1);
+        }, 300)
+      }, 500);
+      setTimeout(function() {
+        interval = setInterval(function(){
+          displayString1(string2);
+        }, 300)
+      }, 8300);
+
+      setTimeout(function() {
+        interval = setInterval(function(){
+          displayString1(string3);
+        }, 300)
+      }, 16000);
+      setTimeout(function() {
+        interval = setInterval(function(){
+          displayString1(string4);
+        }, 300)
+      }, 24000);
+
+
+      // var interval2 = setInterval(function(){
+      //   displayString(string2)
+      // }, 400);
+      // var interval3 = setInterval(function(){
+      //   displayString(string3)
+      // }, 400);
+
+
+      function displayString1 (string) {
+        if (count1 < string.length) {
+
+        var span = "<span id='"+  count1  + "' style=''>" + string[count1] + "</span>";
+        $("#string1").append($(span).show());
+        count1++;
+      }
+      else {
+        clearInterval(interval);
+        count1 = 0;
+        $("#string1").empty();
+        return;
+
+      }
+
+      }
+      // function displayString2 (string) {
+      //   if (count1 < string.length) {
+      //
+      //   var span = "<span id='"+  count1  + "' style=''>" + string[count1] + "</span>";
+      //   $("#string1").append($(span).fadeIn(1500));
+      //   count1++;
+      // }
+      // else {
+      //   clearInterval(interval);
+      // }
+      //
+      // }
+      // function displayString3 () {
+      //   $("#string2").hide();
+      //   if (count3 < string3.length) {
+      //
+      //   var span = "<span id='"+  count3  + "' style=''>" + string3[count3] + "</span>";
+      //   $("#string3").append($(span).fadeIn(1500));
+      //   count3++;
+      // }
+      // else {
+      //   clearInterval(interval);
+      // }
+      //
+      // }
+
+  </script>
+</html>

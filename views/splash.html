@@ -70,7 +70,7 @@
     if (count < title.length) {
       var span = "<span id='"+  count  + "' style=''>" + title[count] + "</span>";
 
-      $("#title").append($(span).fadeIn(1500));
+      $("#title").append($(span).fadeIn(300));
       $("#"+count).animate({top: "+=100px"});
       // $("#"+count).slideDown();
 
@@ -191,7 +191,7 @@
 
 
   $(document).on("click", "#enter", function() {
-    window.location = "main.html";
+    alert("hello");
   })
 </script>
 
