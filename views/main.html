@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    
+    <form>
+        Game name: <input type="text" id="game-name" value=><br>Find Game!
+        
+        <!-- <input type="submit" value="Submit" id="find-game"> -->
+        </form>
+        <button id="find-game">gamesubmit</button>
+        <div id='gameData'>
+            hello world
+        </div>
+        <script src="/javascript/ajax.js"></script>
+
+        <!-- <script>
+            
+            $("#find-game").on("click", function(event) {
+            console.log("test");
+            
+            event.preventDefault();
+            var game = $("#game-name").val(); 
+            $.post('/api/games', game).then(function(data) {
+                console.log(data);
+            });
+
+            });
+        
+        </script> -->
+     
+
+
+</body>
+</html>
