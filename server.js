@@ -18,12 +18,8 @@ var db = require("./models");
 // tell express app instance to look in /public folder for static files
 app.use(express.static("public"));
 
-<<<<<<< HEAD
 
 // parse application/x-www-form-urlencoded looks at url feed
-=======
-// parse application/x-www-form-urlencoded
->>>>>>> 35b6d90ec434189c8d6420e9e851d503cea0a2da
 app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
