@@ -6,10 +6,8 @@ USE game_db;
 
 CREATE TABLE games (
     id INTEGER NOT NULL AUTO_INCREMENT,
-    name VARCHAR(255) NOT NULL,
-    col1 VARCHAR(255) NOT NULL,
-    col2 VARCHAR(255) NOT NULL,
-    col3 VARCHAR(255) NOT NULL,
+    text VARCHAR(255) NOT NULL,
+    complete BOOLEAN DEFAULT false,
     PRIMARY KEY (id)
 );
 

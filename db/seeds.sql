@@ -2,10 +2,7 @@
 USE game_db;
 
 INSERT INTO games
-    (name)
+    (text, complete)
 VALUES
-    ("name"),
-    ("col1"),
-    ("col2");
-    ("col3");
+    ("test", false);
 
