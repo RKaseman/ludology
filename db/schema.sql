@@ -1,0 +1,13 @@
+
+DROP DATABASE IF EXISTS game_db;
+CREATE DATABASE game_db;
+
+USE game_db;
+
+CREATE TABLE games (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    text VARCHAR(255) NOT NULL,
+    complete BOOLEAN DEFAULT false,
+    PRIMARY KEY (id)
+);
+
