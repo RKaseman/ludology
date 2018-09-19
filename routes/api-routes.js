@@ -1,13 +1,19 @@
 
 var db = require("../models");
 
+// function expression for express instance var app does
 module.exports = function (app) {
 
+    // an express look at the /api/games db, running function expression expecting request and response does
     app.get("/api/games", function (req, res) {
+        // 
         db.Game.findAll({
+        // after read, function expression expecting dbGame does
         }).then(function (dbGame) {
+            // response in jsn format
             res.json(dbGame);
         });
+        // end of .then
     });
 
     app.post("/api/games", function (req, res) {

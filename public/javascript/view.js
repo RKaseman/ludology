@@ -84,12 +84,12 @@ $(document).ready(function () {
         var $newInputRow = $(
             [
                 "<li class='list-group-item game-item'>",
+                "<button class='delete btn btn-danger'>x</button>",
+                "<button class='complete btn btn-primary'>✓</button>",
                 "<span>",
                 game.text,
                 "</span>",
                 "<input type='text' class='edit' style='display: none;'>",
-                "<button class='delete btn btn-danger'>x</button>",
-                "<button class='complete btn btn-primary'>✓</button>",
                 "</li>"
             ].join("")
         );
