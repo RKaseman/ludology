@@ -47,6 +47,7 @@ app.get("/", function (req,res){
     res.sendFile(path.join(__dirname, "/views/main.html"));
 });
 
+//allows user queries to return data on games
 app.post("/api/games", function(req, res){
     console.log(req.body.game);
     client.games({
@@ -54,6 +55,7 @@ app.post("/api/games", function(req, res){
         limit: 5, // Limit to 5 results
         // offset: 15, // Index offset for results
         search: req.body.game
+
         
     }).then(response => {
         // console.log(response);
@@ -64,7 +66,23 @@ app.post("/api/games", function(req, res){
     });
     
 })
-
+    //allows user queries to return data on characters
+    app.post("/api/characters", function(req, res){
+    console.log(req.body.game);
+                client.characters({
+                    fields: "*", // Return all fields
+                    limit: 5, // Limit to 5 results
+                    // offset: 15, // Index offset for results
+                    search: req.body.game
+                }).then(response => {
+                    // console.log(response);
+                    // response.body contains the parsed JSON response to this query
+                    res.send(response);
+                }).catch(error => {
+                    throw error;
+                });
+                
+            })
 
 // import routes
 require("./routes/api-routes.js")(app);
