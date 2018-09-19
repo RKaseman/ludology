@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/RKaseman/ludology/issues"
   },
-  "homepage": "https://github.com/RKaseman/ludology#readme"
+  "homepage": "https://github.com/RKaseman/ludology#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "igdb-api-node": "^3.1.7",
+    "path": "^0.12.7"
+  }
 }
