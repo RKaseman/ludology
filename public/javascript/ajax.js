@@ -20,12 +20,12 @@ $("#find-game").on("click", function(event) {
     
     event.preventDefault();
     // var game = $("#game-name").val();
-    var game = {
-      game: $("#game-name2").val()
-    }
+  var character = {
+    character: $("#game-name2").val()
+  }
   
-    console.log(game); 
-    $.post('/api/characters', game).then(function(data) {
+    console.log(character); 
+    $.post('/api/characters', character).then(function(data) {
       $('#gameData').append(data)
       console.log(data);
     });
