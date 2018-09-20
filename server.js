@@ -19,9 +19,8 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
+
 var client = igdb('302b390b8654112eef2ebb62515bc743');
-
-
 
 client.games({
     fields: '*', // Return all fields
