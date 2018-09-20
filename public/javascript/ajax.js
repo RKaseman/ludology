@@ -14,3 +14,20 @@ $("#find-game").on("click", function(event) {
     });
   
   });
+
+  $("#find-game2").on("click", function(event) {
+    console.log("test");
+    
+    event.preventDefault();
+    // var game = $("#game-name").val();
+  var character = {
+    character: $("#game-name2").val()
+  }
+  
+    console.log(character); 
+    $.post('/api/characters', character).then(function(data) {
+      $('#gameData').append(data)
+      console.log(data);
+    });
+  
+  });
