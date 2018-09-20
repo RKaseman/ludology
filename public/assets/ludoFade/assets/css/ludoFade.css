@@ -22,12 +22,12 @@
   
   .animated{    
             background-image:none !important; 
-           -o-animation: fadeIt 10s ease-in-out; 
-              animation: fadeIt 10s ease-in-out;
+           -o-animation: fadeIt 8s ease-in-out; 
+              animation: fadeIt 8s ease-in-out;
   }
 
   feDropShadow {
     background-image:none !important; 
-    -o-animation: fadeIt 10s ease-in-out; 
-       animation: fadeIt 10s ease-in-out;
+    -o-animation: fadeIt 8s ease-in-out; 
+       animation: fadeIt 8s ease-in-out;
   }
