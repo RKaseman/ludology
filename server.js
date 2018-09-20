@@ -29,10 +29,9 @@ var client = igdb('302b390b8654112eef2ebb62515bc743');
 
 client.games({
     fields: '*', // Return all fields
-    limit: 5, // Limit to 5 results
+    limit: 2, // Limit to 5 results
     offset: 15 // Index offset for results
 }).then(response => {
-    // console.log(response);
     // response.body contains the parsed JSON response to this query
 }).catch(error => {
     throw error;
@@ -40,50 +39,56 @@ client.games({
 
 client.characters({
     fields: '*', // Return all fields
-    limit: 5, // Limit to 5 results
+    limit: 2, // Limit to 5 results
     offset: 15 // Index offset for results
 }).then(response => {
-    // console.log(response);
     // response.body contains the parsed JSON response to this query
 }).catch(error => {
     throw error;
 });
 app.get("/", function (req,res){
     // res.send("hello world");
-    res.sendFile(path.join(__dirname, "/views/main.html"));
+    res.sendFile(path.join(__dirname, "/views/index.html"));
 });
+
+
+
 
 //allows user queries to return data on games
 app.post("/api/games", function(req, res){
-    console.log(req.body.game);
     client.games({
         fields: "*", // Return all fields
-        limit: 5, // Limit to 5 results
+        limit: 2, // Limit to 5 results
         // offset: 15, // Index offset for results
         search: req.body.game
 
         
     }).then(response => {
-        // console.log(response);
         // response.body contains the parsed JSON response to this query
         res.send(response);
     }).catch(error => {
         throw error;
     });
-    
+
 })
-    //allows user queries to return data on characters
-    app.post("/api/characters", function(req, res){
-    console.log(req.body.character);
-                client.characters({
-                    fields: "*", // Return all fields
-                    limit: 5, // Limit to 5 results
-                    // offset: 15, // Index offset for results
-                    search: req.body.character
-                }).then(response => {
-                    // console.log(response);
-                    // response.body contains the parsed JSON response to this query
-                    res.send(response);
+
+
+
+
+
+
+
+//allows user queries to return data on characters
+app.post("/api/characters", function(req, res){
+    client.characters({
+        fields: "*", // Return all fields
+        limit: 5, // Limit to 5 results
+        // offset: 15, // Index offset for results
+        search: req.body.character
+    }).then(response => {
+        // response.body contains the parsed JSON response to this query
+        res.send(res);
+        
                 }).catch(error => {
                     throw error;
                 });

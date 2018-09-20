@@ -1,32 +1,35 @@
-$("#find-game").on("click", function(event) {
-    console.log("clicktest");
-    
+
+// var altRoutes = "http://www.mapquestapi.com/directions/v2/alternateroutes?key=" + apiKey + "&from=" + from + "&to=" + to + "&maxRoutes=2&timeOverage=100";
+// console.log("altRoutes : " + altRoutes);
+
+$("#find-game").on("click", function (event) {
+
     event.preventDefault();
     var game = {
-      game: $("#game-name").val()
+        game: $("#game-name").val()
     }
-  
-    console.log(game); 
-    $.post('/api/games', game).then(function(data) {
-      $('#gameData').append(data)
-      console.log(data);
-    });
-  
-  });
 
-  $("#find-game2").on("click", function(event) {
-    console.log("find-game2test");
-    
-    event.preventDefault();
-    // var game = $("#game-name").val();
-  var character = {
-    character: $("#game-name2").val()
-  }
-  
-    console.log(character); 
-    $.post('/api/characters', character).then(function(data) {
-      $('#gameData').append(data)
-      console.log(data);
+    $.post('/api/games', game).then(function (data) {
+        for (var i = 0; i < data.body.length; i++){
+        console.log(data);
+            // for (var j = 0; j < data.body.length; j++)
+            // console.log(data.body[j].url);
+            //     for (var k = 0; k < data.body.length; k++)
+            //         console.log(data.body[k].rating);
+            $("#fucked").append(data.url);
+        }
     });
-  
-  });
+});
+
+$("#find-game2").on("click", function (event) {
+
+    event.preventDefault();
+    var character = {
+        character: $("#game-name2").val()
+    }
+
+    $.post("/api/characters", character).then(function (data) {
+        $("#gameData").append(data)
+    });
+
+});

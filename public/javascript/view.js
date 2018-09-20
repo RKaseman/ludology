@@ -28,6 +28,7 @@ $(document).ready(function () {
             games = data;
             initializeRows();
         });
+        console.log("test!");
     }
 
     function deleteGame(event) {
