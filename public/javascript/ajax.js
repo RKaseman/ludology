@@ -17,12 +17,12 @@ $("#find-game").on("click", function(event) {
     var url = data.body[i].url;
     
     $("#test").append("<div  id='" + i + "'>");
-    $("#"+i).append("<p>" + data.body[i].name + "</p>");
+    $("#"+i).append("<p>" + "Game Title: " + data.body[i].name + "</p>");
 
-    $("#"+i).append("<p>" + data.body[i].summary + "</p>");
-    $("#"+i).append("<p>" + data.body[i].release_dates[0].human + "</p>")
+    $("#"+i).append("<p>" + "Summary: " + data.body[i].summary + "</p>");
+    $("#"+i).append("<p>" + "Release Date: " + data.body[i].release_dates[0].human + "</p>")
     // $("#"+i).append("<p>" + data.body[i].genres + "</p>")
-    $("#"+i).append("<p><img src='" + data.body[i].screenshots[0].url + "'></p>")
+    $("#"+i).append("<p> 'Screenshots: '<img src='" + data.body[i].screenshots[0].url + "'></p>")
 
 
       }
