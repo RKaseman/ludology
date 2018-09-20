@@ -1,8 +1,7 @@
 $("#find-game").on("click", function(event) {
-    console.log("test");
+    console.log("clicktest");
     
     event.preventDefault();
-    // var game = $("#game-name").val();
     var game = {
       game: $("#game-name").val()
     }
@@ -16,7 +15,7 @@ $("#find-game").on("click", function(event) {
   });
 
   $("#find-game2").on("click", function(event) {
-    console.log("test");
+    console.log("find-game2test");
     
     event.preventDefault();
     // var game = $("#game-name").val();

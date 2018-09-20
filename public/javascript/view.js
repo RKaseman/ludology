@@ -8,6 +8,7 @@ $(document).ready(function () {
     $(document).on("keyup", ".game-item", finishEdit);
     $(document).on("blur", ".game-item", cancelEdit);
     $(document).on("submit", "#game-form", insertGame);
+    console.log("!!!!!!!!!!!!!!!!!!");
 
     var games = [];
 
