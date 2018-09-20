@@ -1,12 +1,12 @@
 #lineDrawing {
     background-color: rgb(14, 1, 17);
-    color: rgb(41, 43, 49);
+    color: rgb(41, 43, 49, 0);
 };
 
 @-o-keyframes fadeIt {
     0%   { color: rgb(62, 105, 247); }
     50%  { color: rgb(62, 105, 247); }
-    100% { color: rgb(41, 43, 49); }
+    100% { color: rgb(41, 43, 49, 0); }
     0%   { flood-color: rgb(62, 105, 247); }
     50%  { flood-color: rgb(62, 105, 247); }
     100% { flood-color: rgba(41, 43, 49, 0); }
@@ -14,7 +14,7 @@
   @keyframes fadeIt {
     0%   { color: rgb(62, 105, 247); }
     50%  { color: rgb(62, 105, 247); }
-    100% { color: rgb(41, 43, 49); }
+    100% { color: rgb(41, 43, 49, 0); }
     0%   { flood-color: rgb(62, 105, 247); }
     50%  { flood-color: rgb(62, 105, 247); }
     100% { flood-color: rgba(41, 43, 49, 0); }
@@ -22,12 +22,12 @@
   
   .animated{    
             background-image:none !important; 
-           -o-animation: fadeIt 8s ease-in-out; 
-              animation: fadeIt 8s ease-in-out;
+           -o-animation: fadeIt 9s ease-in-out; 
+              animation: fadeIt 9s ease-in-out;
   }
 
   feDropShadow {
     background-image:none !important; 
-    -o-animation: fadeIt 8s ease-in-out; 
-       animation: fadeIt 8s ease-in-out;
+    -o-animation: fadeIt 9s ease-in-out; 
+       animation: fadeIt 9s ease-in-out;
   }
