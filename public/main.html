@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="assets/css/styles.css" media="screen" title="no title">
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <style>
+        #thediv {
+          /* position: fixed; */
+          margin: 0 13%;
+      }
+      h1, h3 {
+          color: rgb(30,144,255);
+      }
+      .jumbotron {
+          background-color: #36454f ;
+          border: rgb(30,144,255);
+      }
+
+      .btn {
+          color: rgb(30,144,255);
+          border-color: rgb(30,144,255);
+      }
+
+      .btn:hover {
+          background-color: rgb(30,144,255);
+      }
+    </style>
+</head>
+
+<body id="body" class="Matrix">
+
+    <div class="container" id="thediv">
+        <div class="container">
+            <div class="jumbotron">
+                <h1>The greatest resource for videogames a.k.a. we tried</h1>
+                <hr>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" id="game-name" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="find-game">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <ul class="list-group game-list">
+                <li class="list-group-item new-item">
+                    <form id="game-form">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-10">
+                                    <input class="new-item form-control" placeholder="Add a game" type="text" />
+                                </div>
+                                <div class="col-2">
+                                    <button type="submit" id="addGame" class="btn btn-success">Add Game</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+                <span class="game-container">
+                </span>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Custom Script -->
+<script src="javascript/view.js" type="text/javascript"></script>
+
+</body>
+<script>
+
+    var lineDrawing = anime({
+        targets: '#lineDrawing .lines path',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 1000,
+        delay: function (el, i) { return i * 250 },
+        direction: 'alternate',
+        loop: false
+    });
+
+</script>
+
+<script src="javascript/ajax.js"></script>
+
+</body>
+
+</html>

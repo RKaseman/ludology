@@ -1,0 +1,70 @@
+.game-list {
+  margin: 0 auto;
+  margin-top: 75px;
+}
+
+input.new-item:focus {
+  outline: none;
+}
+
+.list-group-item > button.delete,
+.list-group-item > button.complete {
+  float: right;
+  height: 25px;
+  margin-left: 5px;
+}
+
+.edit {
+  width: 100%;
+}
+
+/* index.html */
+
+#title {
+    position: fixed;
+    margin: 0 0;
+    top:32%;
+    left: 42%;
+    color: rgb(30,144,255);
+}
+
+#title span {
+    position: relative;
+}
+
+input {
+    background-color: black;
+    color: rgb(30,144,255);
+    width: 185px;
+}
+#maindiv {
+    position: fixed;
+    background-color: black;
+    color: rgb(30,144,255);
+    top: 50%;
+    left: 42%;
+}
+
+/* main.html */
+
+#thediv {
+    /* position: fixed; */
+    margin: 0 13%;
+}
+
+h1, h3 {
+    color: rgb(30,144,255);
+}
+.jumbotron {
+    background-color: #36454f ;
+    border: rgb(30,144,255);
+}
+
+.btn {
+    color: rgb(30,144,255);
+    border-color: rgb(30,144,255);
+}
+
+.btn:hover {
+    background-color: rgb(30,144,255);
+}
